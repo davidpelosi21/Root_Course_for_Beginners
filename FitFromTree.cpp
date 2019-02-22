@@ -8,6 +8,7 @@ void  T(){
     
     dato dx,dy;
     
+    //path dove è stato  salvato il file.root
     auto infile = TFile::Open("/Users/David/root/macros/esTree.root");
 
     auto tree = (TTree *)infile->Get("t1");
