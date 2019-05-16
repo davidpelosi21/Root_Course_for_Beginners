@@ -5,14 +5,14 @@ void g(){
     TGraphErrors *g = new TGraphErrors(nomefile);
    
     
-    g->SetMarkerColor(1); //Markers...
-    g->SetMarkerStyle(21);
+    g->SetMarkerColor(8); //Markers...
+    g->SetMarkerStyle(22);
     //g->SetTitle("titolo");
-    g->SetLineColor(1);
+    g->SetLineColor(8);
     cout<<"****************************"<<endl;
     cout<<"FIT funzione G-->  "<<endl;
     g->Fit("pol1");
-    g->GetFunction("pol1")->SetLineColor(1);
+    g->GetFunction("pol1")->SetLineColor(8);
 
 
     TString nomefile2 = "/Users/David/Desktop/punticurva2.txt"; //percorso
@@ -23,14 +23,14 @@ void g(){
     //f->GetXaxis()->CenterTitle();
     //f->GetYaxis()->CenterTitle();
     
-    f->SetMarkerColor(2); //Markers...
-    f->SetMarkerStyle(21);
-    f->SetLineColor(2);
+    f->SetMarkerColor(6); //Markers...
+    f->SetMarkerStyle(23);
+    f->SetLineColor(6);
     cout<<"****************************"<<endl;
     cout<<"FIT funzione F-->  "<<endl;
     
-    f->Fit("gaus");
-    f->GetFunction("pol1")->SetLineColor(2);
+    f->Fit("pol1");
+    f->GetFunction("pol1")->SetLineColor(6);
     
     
     
